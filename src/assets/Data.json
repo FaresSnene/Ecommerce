@@ -1,0 +1,40 @@
+{
+  "elec" :[
+  {
+    "id" : "1",
+    "name" : "PORTABLE LENOVO IDEAPAD S145-15API / AMD DUAL CORE / 4 GO / NOIR",
+    "prix" : "815,000",
+    "url" : "https://www.tunisianet.com.tn/img/cms/mine/LenovoIdeapadS145-15IWL__4_.JPG"
+  },
+  {
+    "id" : "2",
+    "name" : "PC PORTABLE MSI GAMING GF63 THIN 10SCSR / I5 10È GÉN / 8 GO",
+    "prix" : "2 569,000",
+    "url" : "https://www.tunisianet.com.tn/175877-large/pc-portable-msi-gaming-gf63-thin-10scsr-i5-10e-gen-8-go-sim-orange-offerte-60-go.jpg"
+  },
+  {
+    "id" : "3",
+    "name" : "ECRAN SAMSUNG 23.5\" LED FULL HD",
+    "prix" : "375,000",
+    "url" : "https://www.tunisianet.com.tn/54893-large/ecran-samsung-235-led-full-hd.jpg"
+  },
+  {
+    "id" : "4",
+    "name" : "TÉLÉPHONE PORTABLE APPLE IPHONE 12 / 64 GO / BLEU",
+    "prix" : "3 499,000",
+    "url" : "https://www.tunisianet.com.tn/189742-large/telephone-portable-apple-iphone-12-64-go-bleu.jpg"
+  },
+  {
+    "id" : "5",
+    "name" : "TÉLÉPHONE PORTABLE SAMSUNG GALAXY A21S / BLANC",
+    "prix" : "699,000",
+    "url" : "https://www.tunisianet.com.tn/191452-large/telephone-portable-samsung-galaxy-a21s-blanc.jpg"
+  },
+  {
+    "id" : "6",
+    "name" : "CONSOLE PLAYSTATION 4 SLIM / 500 GO / NOIR",
+    "prix" : "1 519,000",
+    "url" : "https://www.tunisianet.com.tn/131293-large/console-playstation-4-slim-500-go-noir.jpg"
+  }
+]
+}
