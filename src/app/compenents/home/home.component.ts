@@ -8,12 +8,28 @@ import { ServiceService } from 'src/app/Providers/service.service';
 })
 export class HomeComponent implements OnInit {
   produit: any;
+  srch: any;
   constructor(private service: ServiceService) {}
 
   ngOnInit(): void {
-    this.service.getAll().subscribe((res) => {
+    this.getAllProduct();
+  }
+
+  getAllProduct() {
+    this.service.getProducts().subscribe((res) => {
       this.produit = res;
-      console.log(res);
+    });
+  }
+
+  deleteProduct(product: any) {
+    this.service.deleteProduct(product.id).subscribe(() => {
+      this.getAllProduct();
+    });
+  }
+
+  search() {
+    this.service.searchProduct(this.srch).subscribe((res) => {
+      this.produit = res;
     });
   }
 }

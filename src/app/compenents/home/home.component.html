@@ -8,16 +8,6 @@
           </h1>
         </div>
       </div>
-
-      <div class="col-sm-6">
-        <div class="shopping-item">
-          <a href="cart.html"
-            >Cart - <span class="cart-amunt">$100</span>
-            <i class="fa fa-shopping-cart"></i>
-            <span class="product-count">5</span></a
-          >
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -41,14 +31,21 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop page</a></li>
-          <li><a href="single-product.html">Single product</a></li>
-          <li><a href="cart.html">Cart</a></li>
-          <li><a href="checkout.html">Checkout</a></li>
-          <li><a href="#">Category</a></li>
-          <li><a href="#">Others</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a routerLink="/add/">Add Article</a></li>
+          <li>
+            <form class="example">
+              <input
+                type="text"
+                placeholder="Search.."
+                name="search"
+                [(ngModel)]="srch"
+              />
+              <button type="submit" (click)="search()">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </li>
         </ul>
       </div>
     </div>
@@ -99,22 +96,28 @@
           <div class="product-carousel">
             <div class="single-product col-md-3" *ngFor="let item of produit">
               <div class="product-f-image" style="height: 250px; width: 250px">
-                <img [src]="item.url" alt="" />
+                <img [src]="item.image" alt="" />
                 <div class="product-hover">
-                  <a href="#" class="add-to-cart-link"
-                    ><i class="fa fa-shopping-cart"></i> Add to cart</a
+                  <a routerLink="/update/{{ item.id }}" class="add-to-cart-link"
+                    ><i class="fa fa-shopping-cart"></i> Modify Product</a
                   >
-                  <a href="single-product.html" class="view-details-link"
+                  <a routerLink="/view/{{ item.id }}" class="view-details-link"
                     ><i class="fa fa-link"></i> See details</a
                   >
                 </div>
               </div>
               <h2>
-                <a href="single-product.html">{{ item.name }}</a>
+                <a routerLink="/view/{{ item.id }}">{{ item.name }}</a>
+                <a
+                  href="#"
+                  class="add-to-cart-link"
+                  (click)="deleteProduct(item)"
+                  ><i class="fa fa-trash"></i> Delete</a
+                >
               </h2>
 
               <div class="product-carousel-price">
-                <ins>{{ item.prix }}DT</ins> <del>$100.00</del>
+                <ins>{{ item.price }}DT</ins> <del>$100.00</del>
               </div>
             </div>
           </div>
